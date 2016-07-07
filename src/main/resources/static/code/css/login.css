@@ -1,0 +1,35 @@
+#main{
+	background-image: url(../img/background.png);
+	text-align:center;
+	margin-left:auto; 
+	margin-right:auto;
+}
+.avatar{
+	margin-top:90px;
+}
+.avatar img{
+	width: 150px;
+	height: 150px;
+	border: 1px #CCC solid;
+	border-radius: 30%;
+}
+.login-form{
+	background: url(../img/login_form.png);
+    margin-top: 65px;
+}
+.login-form input{
+	height: 25px;
+	width: 300px;
+	margin:15px 0;
+	border-radius: 33px;
+	border: 0px;
+	font-size:20px;
+	text-align: center;
+}
+.submit-btn{
+	margin-top:15px;
+	width: 100px;
+	height: 25px;
+	border:0;
+	border-radius: 33px;
+}

@@ -1,0 +1,61 @@
+#main{
+  background-image: url(../img/background.png);
+}
+#head{
+  background: url(../img/login_form.png);
+  height: 50px;
+}
+#head img{
+  margin-left: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 20%;
+}
+#c1{
+  margin-top: 10px;
+  background: url(../img/login_form.png);
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  float:left;
+  border-radius: 5%;
+  text-align: center;
+}
+#c1 img{
+  margin-left: 22px;
+  margin-top: 15px;
+  background: url(../img/login_form.png);
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  float:left;
+  border-radius: 10%;
+}
+#c2{
+  margin-top: 10px;
+  margin-left:15px;
+  background: url(../img/login_form.png);
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  float:left;
+  text-align: center;
+  border-radius: 5%;
+}
+#c2 img{
+  margin-top: 15px;
+  margin-left: 22px;
+  background: url(../img/login_form.png);
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  float:left;
+  border-radius: 10%;
+}
+.role{
+  margin-top: 170px;
+  background-color:green;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
