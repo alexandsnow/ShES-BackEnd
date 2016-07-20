@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value="v1")
-@Api(description = "check the status of GaH Service",value = "Health API")
+@Api(value = "Server-API" ,description = "return the status of Server")
 public class Health {
 
     @RequestMapping(value="/health",method= RequestMethod.GET)
     @ApiOperation(value="return the status of Server")
     public String returnStatus(){
-        String status="Tht GaH Server is running.....";
+        String status="Tht ShES Server is running.....";
         return status;
     }
 

@@ -32,8 +32,8 @@ public class SwaggerUIConfig {
     }
     private ApiInfo getApiInfo() {
         ApiInfo apiInfo = new ApiInfoBuilder()
-                .title("GaH")
-                .description("GaH backend")
+                .title("ShES")
+                .description("ShES backend")
                 .termsOfServiceUrl("http://example.com/terms-of-service")
                 .contact("18817393346@163.com")
                 .license("MIT License")

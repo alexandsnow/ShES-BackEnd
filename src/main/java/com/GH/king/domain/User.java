@@ -4,76 +4,67 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 /**
- * Created by alex on 2016/1/22.
+ * Created by gy on 2016/7/19.
  */
 @Entity
 @Table(name = "Users")
 public class User {
-    @Column(name = "name")
-    private String userName;
-    @Column(name = "password")
-    private String userPsd;
+
+    private int Id;
+    private String name;
+    private String password;
+    private String score;
+    private String pic;
+    private String department;
+
     @Id
-    @Column(name = "Id")
-    private String userId;
-    @Column(name = "email")
-    private String email;
-    @Column(name = "role")
-    private String role;
-    @Column(name = "profile")
-    private String headPic;
-
-
-    public User() {
+    @Column(name = "ID")
+    public int getId() {
+        return Id;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setId(int id) {
+        Id = id;
+    }
+    @Column(name = "Name")
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
+    }
+    @Column(name = "Password")
+    public String getPassword() {
+        return password;
     }
 
-    public String getUserPsd() {
-        return userPsd;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    @Column(name = "Score")
+    public String getScore() {
+        return score;
     }
 
-    public void setUserPsd(String userPsd) {
-        this.userPsd = userPsd;
+    public void setScore(String score) {
+        this.score = score;
+    }
+    @Column(name = "Pic")
+    public String getPic() {
+        return pic;
     }
 
-    public String getUserId() {
-        return userId;
+    public void setPic(String pic) {
+        this.pic = pic;
+    }
+    @Column(name = "Department")
+    public String getDepartment() {
+        return department;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public String getHeadPic() {
-        return headPic;
-    }
-
-    public void setHeadPic(String headPic) {
-        this.headPic = headPic;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }
