@@ -8,92 +8,81 @@ import javax.persistence.*;
 @Entity
 @Table(name = "QuestionBank")
 public class Question {
-    private int Id;
-    private String Group;
-    private String Title;
-    private String ItemA;
-    private String ItemB;
-    private String ItemC;
-    private String ItemD;
-    private String Answer;
+    private int id;
+    private String group;
+    private String title;
+    private String itemA;
+    private String itemB;
+    private String itemC;
+    private String itemD;
+    private String answer;
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(int id) {
-        Id = id;
+    public void setId(int Id) {
+        id = Id;
     }
     @Column(name = "GroupType")
     public String getGroup() {
-        return Group;
+        return group;
     }
 
-    public void setGroup(String group) {
-        Group = group;
+    public void setGroup(String Group) {
+        group = Group;
     }
 
     @Column(name="Title")
     public String getTitle() {
-        return Title;
+        return title;
     }
 
-    public void setTitle(String title) {
-        Title = title;
+    public void setTitle(String Title) {
+        title = Title;
     }
     @Column(name="ItemA")
     public String getItemA() {
-        return ItemA;
+        return itemA;
     }
 
-    public void setItemA(String itemA) {
-        ItemA = itemA;
+    public void setItemA(String ItemA) {
+        itemA = ItemA;
     }
     @Column(name="ItemB")
     public String getItemB() {
-        return ItemB;
+        return itemB;
     }
 
-    public void setItemB(String itemB) {
-        ItemB = itemB;
+    public void setItemB(String ItemB) {
+        itemB = ItemB;
     }
     @Column(name="ItemC")
     public String getItemC() {
-        return ItemC;
+        return itemC;
     }
 
-    public void setItemC(String itemC) {
-        ItemC = itemC;
+    public void setItemC(String ItemC) {
+        itemC = ItemC;
     }
     @Column(name="ItemD")
     public String getItemD() {
-        return ItemD;
+        return itemD;
     }
 
-    public void setItemD(String itemD) {
-        ItemD = itemD;
+    public void setItemD(String ItemD) {
+        itemD = ItemD;
     }
     @Column(name="Answer")
     public String getAnswer() {
-        return Answer;
+        return answer;
     }
 
-    public void setAnswer(String answer) {
-        Answer = answer;
-    }
-
-    public void show() {
-        System.out.println(this.Title+"\n"+
-        this.Group+"\n"+
-        this.ItemA+"\n"+
-        this.ItemB+"\n"+
-        this.ItemC+"\n"+
-        this.ItemD+"\n"+
-        this.Answer+"\n"
-        );
+    public void setAnswer(String Answer) {
+        answer = Answer;
     }
 }
 

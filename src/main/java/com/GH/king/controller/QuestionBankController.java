@@ -3,9 +3,13 @@ package com.GH.king.controller;
 import com.GH.king.domain.Question;
 import com.GH.king.repository.QuestionRepository;
 import com.GH.king.tools.FileReader;
+import com.google.common.collect.Iterables;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,12 +27,15 @@ public class QuestionBankController {
     @Inject
     QuestionRepository questionRepo;
 
+    @Value("${Page.size}")
+    private String pageSize;
+
     @Value("${QuestionBank.filePath}")
     private String filePath;
 
 
-    @RequestMapping(value="/QuestionBank/addAll",method = RequestMethod.GET)
-    @ApiOperation("add all of the questions into the DataBase")
+    @RequestMapping(value="/QuestionBank/addAllByFile",method = RequestMethod.GET)
+    @ApiOperation("add all of the questions in the file")
     public String addQuestionBankByFile(){
         FileReader fr=new FileReader();
         String questions[]=fr.read(filePath).split("#");
@@ -65,5 +72,16 @@ public class QuestionBankController {
         question.setAnswer(answer);
         questionRepo.save(question);
         return new ResponseEntity<>(question, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/getQuestions/{group}",method = RequestMethod.GET)
+    @ApiOperation(value = "return  random question of your Group",response = Question.class,responseContainer = "List")
+    public ResponseEntity<Page<Iterable<Question>>> getQuestions(@PathVariable("group")String group,
+                                                                 @RequestParam(value="size" ,required=false) Integer size){
+        if(size==null)
+            size=Integer.parseInt(pageSize);
+        Pageable p=new PageRequest(0,size);
+        Page<Iterable<Question>> result = questionRepo.getRandQuestions(group,p);
+        return new ResponseEntity<>(result,HttpStatus.OK);
     }
 }

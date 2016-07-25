@@ -11,7 +11,7 @@ public class TestSql {
     @Test
     public void ConnectSqlServer(){
         String driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String dbURL="jdbc:sqlserver://192.168.1.113:1433;databaseName=ShESDB";
+        String dbURL="jdbc:sqlserver://120.27.30.105:1433;databaseName=ShESDB";
         String userName="GaH";
         String userPsd="123456789";
         Connection dbCon;
@@ -26,7 +26,7 @@ public class TestSql {
             st=dbCon.createStatement();
             rs=st.executeQuery(sql);
             while(rs.next()){
-                System.out.println("Data:"+rs.getString(1));
+                System.out.println("Data:"+rs.getString(2));
             }
         }catch (SQLException e) {
             e.printStackTrace();

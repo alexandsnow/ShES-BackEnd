@@ -1,0 +1,110 @@
+.ticTocTitle {
+	color: red;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+#LeftTime {
+	display: none;
+	text-align: center;
+	font-size:28px;
+	font-weight: 700;
+}
+#mymodal-data {
+	display: none;
+}
+.content .subAnswer-part{
+	width: 90%;
+	margin:20px auto;
+	padding: 50px;
+	color: #080808;
+	background-color: #fff;
+}
+.content .subAnswer-part .testPaperTitle{
+	text-align: center;
+}
+.testPaperTitle h3{
+	font-weight: 700;
+}
+.testPaperTitle p{
+	font-size: 12px;
+    width: 90%;
+	margin:20px auto;
+    border-bottom: 2px solid #02915f; 
+	padding-bottom: 20px;
+}
+
+.content .subAnswer-part .questionWrap{
+	width: 90%;
+	margin:30px auto;
+}
+.questionWrap .questionObj{
+	padding: 20px 20px;
+    background-color: rgba(255,255,255,.1);
+    margin-bottom: 10px;
+    -webkit-box-shadow:0px 5px 4px #CCC; 
+  	   -moz-box-shadow:0px 5px 4px #CCC;  
+            box-shadow:0px 5px 4px #CCC;
+}	
+.questionWrap .questionObj .title{
+    font-size: 15px;
+    color: #080808;
+    font-weight: 700;
+}
+.questionWrap .questionObj .answers{
+	margin:10px 30px;
+
+}
+.answers .item{
+	padding: 5px 15px;
+}
+
+.content .btn-submit{
+	margin:20px 50px;
+	text-align: center;
+}
+
+.answerEnn-part{
+	width: 60%;
+	margin:30px auto;
+	text-align: center;
+	background-color: #fff;
+	padding: 100px 0 30px; 
+	-webkit-box-shadow:0px 5px 4px #CCC; 
+  	   -moz-box-shadow:0px 5px 4px #CCC;  
+            box-shadow:0px 5px 4px #CCC;
+}
+.answerEnn-part hr{
+	height:1px;
+	width: 60%;
+	margin:0 auto;
+	border-top:2px ridge #333;
+	-webkit-box-shadow:0px 2px 2px #CCC; 
+  	   -moz-box-shadow:0px 2px 2px #CCC;  
+            box-shadow:0px 2px 2px #CCC;
+}
+.answerEnn-part p{
+	font-size: 25px;
+	font-weight: 700;
+	margin:40px auto;
+}
+.answerEnn-part button{
+	margin: 75px 0 55px;
+}
+/*中屏样式*/
+@media (max-width: 767px) {
+	.answerEnn-part p{
+		font-size: 15px;
+		font-weight: 700;
+		margin:40px auto;
+	}
+	.questionWrap .questionObj .answers {
+    	margin: 10px 10px;
+	}
+	.content .subAnswer-part{
+		width: 100%;
+	}
+	.questionWrap .questionObj{
+		padding: 20px 5px;
+	}
+}

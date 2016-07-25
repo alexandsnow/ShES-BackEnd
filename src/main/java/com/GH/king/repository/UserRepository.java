@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
  * Created by alex on 2016/1/22.
  */
 @Repository
-public interface UserRepository extends CrudRepository<User,String>{
+public interface UserRepository extends CrudRepository<User,Integer>{
+    User findByName(String name);
 }

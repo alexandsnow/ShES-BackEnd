@@ -1,0 +1,55 @@
+.content .half-part{
+	width: 50%;
+	margin:0 auto;
+	float:left;
+}
+.content .half-part .subpart{
+	height: 550px;
+	width: 90%;
+	margin:20px auto;
+	border-radius: 1px;
+}
+
+#MyBar ,#MyPie{
+	height: inherit;
+	width: 95%;
+	margin:0 auto;
+	padding-top: 10px;
+}
+
+.content .part{
+	width: 100%;
+	margin:0 auto;
+}
+
+.content .part .subpart{
+	width: 95%;
+	margin:20px auto;
+	text-align: center;
+	padding: 20px 100px 60px;
+	border-radius: 1px;
+}
+
+.part .subpart button{
+	margin-top: 65px;
+}
+.part .subpart hr{
+	border-top: 3px solid #02915f;
+	padding-bottom: 10px;
+}
+@media (min-width: 768px) and (max-width: 979px){
+	.content .half-part{
+		width: 100%;
+	}
+}
+
+@media(max-width: 767px){
+	.content .half-part{
+		width: 100%;
+		margin:0 auto;
+		float:left;
+	}
+	.content .half-part .subpart{
+		width: 95%;
+		height: 650px;
+}

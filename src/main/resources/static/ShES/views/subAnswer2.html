@@ -1,0 +1,60 @@
+
+<div class="content clearfix">
+	<!-- 倒计时模块 -->
+	<div class="tic-toc clearfix">			
+		<a href="/#" id="days">0天</a>
+		<a href="/#" id="hours">0时</a>
+		<a href="/#" id="minutes">00分</a>
+		<a href="/#" id="seconds">00秒</a>
+	</div>
+	<p id="LeftTime">您已经没有答题时间，请查看自己的成绩！</p>
+	<!--模态弹出框 -->
+	<div class="modal fade" id="mymodal-data2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myAlert">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">倒计时结束</h4>
+				</div>
+				<div class="modal-body">
+					<p><strong>您的时间没有了哦<br>请选择退出答题</strong></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-defaulti" id="answerOver" data-dismiss="modal">退出答题</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--模态弹出框结束 -->
+	<!-- 倒计时模块结束 -->
+	<div class="subAnswer-part">
+		<div class="testPaperTitle">
+			<h3 ng-bind="questions.groupName">学习型班组</h3>
+			<p>10 个问题 1 页<br> <br>考察 <strong ng-bind="questions.groupName"></strong>相关内容学习情况，请根据题目选出正确答案</p>
+		</div>
+
+		<div class="questionWrap"  ng-repeat="question in questions.questionGroup">
+
+			<div class="questionObj">
+				<div class="title">
+					<span ng-bind="question.id"></span>:
+					<span ng-bind="question.title"></span>
+				</div>
+				<div class="answers" ng-repeat="answer in question.answers">
+					<div class="item">
+						<input type="radio"/>
+						<span ng-bind="answer.id" ></span>
+						<span ng-bind="answer.content"></span>
+					</div>					
+				</div>
+			</div>
+
+		</div>
+		<div class="btn-submit">
+			<button type="button" class="btn btn-success">提交答案</button>
+		</div>
+	</div>
+</div>

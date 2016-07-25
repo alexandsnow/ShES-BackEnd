@@ -1,0 +1,145 @@
+body{
+	overflow-x:hidden;
+}
+ul{
+	margin-bottom: 0;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+caption,td,tr{
+	text-align: center;
+}
+p {
+	margin:0;
+}
+.views-bg {
+	background-color: #eee;
+}
+.MyThemeColor{
+	background-color: #02915f;
+}	
+
+.MyColor1{
+	background-color: rgba(76, 175, 80, 0.71);
+}
+.MyColor2{
+	background-color: rgba(0, 188, 212, 0.71);
+}
+.MyColor3{
+	background-color: rgba(156, 39, 176, 0.71);
+}
+.MyColor4{
+	background-color: rgba(0,0,0,0.5);
+}
+.MyColor5{
+	background-color: rgba(0, 150, 136, 0.71);
+}
+.Myshadow{
+	background-color: #fff;
+	-webkit-box-shadow:0px 5px 4px #CCC;
+  	   -moz-box-shadow:0px 5px 4px #CCC;
+            box-shadow:0px 5px 4px #CCC;
+}
+.error{
+	border:1px solid red;
+}
+.warning{
+	margin-top: 2px;
+	color: red;
+}
+
+/*定义头部样式*/
+.nav-bg {
+	background-color: #FFF;
+	-webkit-box-shadow:0px 5px 4px #CCC; 
+  	   -moz-box-shadow:0px 5px 4px #CCC;  
+            box-shadow:0px 5px 4px #CCC;
+}
+.logo-pic{
+	width: 200px;
+	height: 40px;
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 30px;
+}
+
+.user-pic{
+	width: 45px;
+	height: 45px;
+	margin-top:3px;
+	margin-right:10px;
+	border-radius: 50px;
+	float:left;
+	display: block;
+	border: 1px solid #02915f;
+}
+.float-left{
+	float: left;
+	padding-left: 1%;
+}
+.float-right{
+	float: right;
+    margin-right:15px;
+}
+.float-right li {
+	float:left;
+}
+.nav-bar{
+	display: block;
+}
+.nav-bar li{
+	height: 50px;
+}
+.nav-bar li a{
+	text-align: center;
+	display: inline-block;
+	line-height: 50px;
+	padding:  0 15px ;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+	color: #02915f;
+}
+.nav-bar li:hover{
+	border-bottom: 4px solid #02915f;
+	background-color: #eee;
+}
+
+/*头部样式结束*/
+
+/*定义尾部样式*/
+footer{
+	width: 100%;
+	display: block;
+} 
+.foot-href{
+	margin:30px auto 10px;
+	text-align: center;
+}
+.foot-href a{
+	margin:0 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #b4bbbf;
+	text-decoration: none;
+}
+.foot-href a:hover{
+	color: #02915f;
+}
+.copyright{
+	width: 70%;
+	margin:20px auto;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	padding-top: 20px;
+	border-top: 2px solid #eee;
+	color: #b4bbbf;
+	line-height: 14px;
+}
+/*尾部样式结束/

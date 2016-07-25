@@ -1,0 +1,72 @@
+	<!-- content开始 -->
+	<div class="content">
+		<!-- 包括三个部分  提示模块 五个答题模块，确认倒计时模块 -->
+		<!-- 提示模块 -->
+		<div class="tip">
+			<p>恭喜!</p>
+			<h4>您的试卷已经生成,开始做题吧</h4>
+			<button type="button" class="btn btn-lg btn-success begin-btn">开始答题</button>
+			<div class="wram-note">
+				<i class="glyphicon glyphicon-hand-down"></i>
+			</div>		
+		</div>
+		<!-- 答题模块 -->
+		<div class="answer-part clearfix Myshadow">
+			<div class="myBox">
+				<div class="boxContent MyColor1" id="itme1">
+					学习型班组
+				</div>
+				<div class="disabled-cover"></div>
+			</div>
+			<div class="myBox">
+				<div class="boxContent MyColor2" id="itme2">
+					创新型班组
+				</div>
+				<div class="disabled-cover"></div>
+			</div>
+			<div class="myBox">
+				<div class="boxContent MyColor3" id="itme3">
+					安全型班组
+				</div>
+				<div class="disabled-cover"></div>
+			</div>
+			<div class="myBox">
+				<div class="boxContent MyColor4" id="itme4">
+					清洁型班组
+				</div>
+				<div class="disabled-cover"></div>
+			</div>
+			<div class="myBox">
+				<div class="boxContent MyColor5" id="itme5">
+					节约型班组
+				</div>
+				<div class="disabled-cover"></div>
+			</div>
+		</div>
+		<!-- 答题模块结束 -->
+	</div>
+	<!-- content结束 -->
+	<!--模态弹出框 -->
+	<div class="modal fade" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myAlert">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">通知</h4>
+				</div>
+				<div class="modal-body">
+					<p><strong>请尽快完成当前类测试 <br> 中途不要退出，否则无法记录成绩</strong></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">重新选择</button>
+					<button type="button" data-dismiss="modal" class="btn btn-defaulti" id="answerJump">开始做题</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--模态弹出框结束 -->
+
+

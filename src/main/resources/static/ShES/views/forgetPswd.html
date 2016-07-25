@@ -1,0 +1,43 @@
+<div class="wrapper clearfix">
+		<div class="logo">
+			<img src="images/logo.jpg" alt="上海教育超市">
+		</div>
+		<form class="clearfix" role="form" name="ForgetPswdForm" ng-submit="ForgetPswd()">	
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="请输入用户名/员工号"
+					name="Name"
+					ng-model="userName"
+					ng-maxlength="15"
+					ng-minlength="6"
+					required
+					ng-class="{'error':ForgetPswdForm.Name.$invalid && ForgetPswdForm.Name.$touched}"
+				/>
+				<div class="warning" ng-if="ForgetPswdForm.Name.$invalid && ForgetPswdForm.Name.$touched">请输入6到15位的用户名</div>
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="请输入新密码"
+					name="password1"
+					ng-model="password1"
+					ng-maxlength="10"
+					ng-minlength="6"
+					required
+					ng-class="{'error':ForgetPswdForm.password1.$invalid && ForgetPswdForm.password1.$touched}"
+				/>
+				<div class="warning" ng-if="ForgetPswdForm.password1.$invalid && ForgetPswdForm.password1.$touched">请输入6到10位的密码</div>
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="请输入确认密码"
+					name="password2"
+					ng-model="password2"
+					ng-maxlength="10"
+					ng-minlength="6"
+					required
+					ng-class="{'error':ForgetPswdForm.password2.$invalid && ForgetPswdForm.password2.$touched}"
+				/>
+				<div class="warning" ng-if="ForgetPswdForm.password2.$invalid && ForgetPswdForm.password2.$touched">请输入6到10位的密码</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-success btn-lg btn-block">确认</button>
+			</div>
+		</form>
+</div>	

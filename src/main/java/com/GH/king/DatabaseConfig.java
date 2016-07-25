@@ -50,8 +50,7 @@ public class DatabaseConfig {
     }
 
     @Bean(name = "mTransactionManager")
-
-    public PlatformTransactionManager springTransactionManager() {
+    public PlatformTransactionManager mTransactionManager() {
         JpaTransactionManager manager = new JpaTransactionManager();
         manager.setEntityManagerFactory(mEntityManagerFactory().getObject());
         return manager;

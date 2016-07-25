@@ -1,0 +1,91 @@
+/*banner样式开始*/
+.content .rank-banner{
+	margin-top: 10px;
+	background-image: url(../images/rank-banner.jpg);
+	background-size: cover;
+    padding: 138px 0 0;
+    text-align: center;
+    min-height: 400px;
+    position: relative;
+    opacity: 0.9;
+}
+.content .rank-banner h2{
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.content .rank-banner p{
+	line-height: 24px;
+    margin: 30px auto 40px auto;
+    font-size: 16px;
+    width: 65%;
+}
+.content .rank-banner button{
+	margin-top: 10px;
+}
+
+/*banner样式结束*/
+
+/*dashboard 样式开始*/
+.dashboard{
+	width: 90%;
+	margin:30px auto 20px;
+	border-top: 4px solid #02915f;
+}
+
+.dashboard .Mybox{
+	width:25%;  
+	float: left;
+}
+
+.dashboard .Mybox .boxContent{
+	height: 120px;
+	margin:30px 30px;
+	color: #fff;
+	text-align: center;
+	line-height: 120px;
+	border-radius: 10px;
+}
+.Mybox .boxContent span{
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+}
+/*dashboard样式结束*/
+
+/*rank 样式开始*/
+.rank{
+	width: 90%;
+	margin:30px auto 2px;
+	padding:0 2px;
+	padding:10px 2px;
+}
+.rank caption{
+	font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    margin: 30px auto 23px;
+    border-bottom: 2px solid #02915f;
+}
+.rank .wrap{
+	width: 80%;
+	margin:0 auto;
+}
+/*rank 样式结束*/
+
+/*中屏样式*/
+@media (min-width: 768px) and (max-width: 960px) {
+	.dashboard .Mybox{
+		width:50%;  
+	}
+}
+/*中屏样式结束*/
+/*小屏样式开始*/
+@media (max-width: 767px) {
+	.dashboard .Mybox{
+		width:100%;  
+	}
+}
+/*小屏样式结束*/

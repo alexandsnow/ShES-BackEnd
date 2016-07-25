@@ -25,7 +25,6 @@ public class testUploadQuestionBank {
             domain.setItemC(str[4]);
             domain.setItemD(str[5]);
             domain.setAnswer(str[6]);
-            domain.show();
         }
     }
 }
