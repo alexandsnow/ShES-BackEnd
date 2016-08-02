@@ -84,5 +84,10 @@ public class Question {
     public void setAnswer(String Answer) {
         answer = Answer;
     }
+
+    @Override
+    public String toString() {
+        return this.getTitle();
+    }
 }
 

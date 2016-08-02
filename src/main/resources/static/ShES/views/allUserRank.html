@@ -48,58 +48,14 @@
 						<td class="col-sm-3">分数</td>
 					</tr>
 				</thead>
-				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-
-				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-				    <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-
-				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-				   <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-
-				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
- 				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>
-
-				  <tr class="row">
-					    <td class="col-sm-1">1</td>
-					    <td class="col-sm-5">TB - Monthly</td>
-					    <td class="col-sm-3">01/04/2012</td>
-					    <td class="col-sm-3">Approved</td>
-				  </tr>				
+				<tbody>
+					<tr class="row" ng-repeat="rank in rankInfo">
+					    <td class="col-sm-1" ng-bind="rank.level"></td>
+					    <td class="col-sm-5" ng-bind="rank.apartment"></td>
+					    <td class="col-sm-3" ng-bind="rank.date"></td>
+					    <td class="col-sm-3" ng-bind="rank.score"></td>
+					</tr>	
+				</tbody>				
 			</table>
 		</div>
 	</div>

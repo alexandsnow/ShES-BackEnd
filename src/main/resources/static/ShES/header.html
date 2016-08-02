@@ -11,17 +11,28 @@
 		</div>
    		<div  class="collapse navbar-collapse" id="navbar-a">
 			<ul class="nav navbar-nav nav-bar float-left">
-				<li ui-sref="header.indexpage"><a href="#">首页</a></li>
-				<li ui-sref="header.study"><a href="#">学习</a></li>
-				<li ui-sref="header.answer"><a href="#">测试</a></li>
-				<li ui-sref="header.allUserRank"><a href="#">排名</a></li>
-				<li ui-sref="header.myScore"><a href="#">成绩</a></li>
+				<li ng-click="navSelect(0)" ng-class="{true:'isSelected',false:'noSelected'}[navActived1]">
+					<a ui-sref="header.indexpage">首页</a>
+				</li>
+				<li  ng-click="navSelect(1)" ng-class="{true:'isSelected',false:'noSelected'}[navActived2]">
+					<a ui-sref="header.study">学习</a>
+				</li>
+				<li  ng-click="navSelect(2)" ng-class="{true:'isSelected',false:'noSelected'}[navActived3]">
+					<a ui-sref="header.answer">测试</a>
+				</li>
+				<li  ng-click="navSelect(3)" ng-class="{true:'isSelected',false:'noSelected'}[navActived4]">
+					<a ui-sref="header.allUserRank" >排名</a>
+				</li>
+				<li  ng-click="navSelect(4)" ng-class="{true:'isSelected',false:'noSelected'}[navActived5]">
+					<a ui-sref="header.myScore">成绩</a>
+				</li>
 			</ul>
-			<ul class="nav navbar-nav nav-bar float-right">
-				<img class="user-pic" src="images/userPic.jpg" alt="用户头像">
-				<li class="username"><a href="#">小明</a></li>
-				<li><a ui-sref="login">退出</a></li>
-			</ul>
+			<div class="nav navbar-nav nav-bar float-right">
+				<img class="user-pic" src="images/userPic.jpg" alt="用户头像" data-toggle="tooltip" data-placement="bottom">
+				<div class="username" ng-bind="username"></div>
+				<div>|</div>
+				<div class="out"><a ui-sref="login">退出</a></div>
+			</div>
 		</div>
 </nav>
 

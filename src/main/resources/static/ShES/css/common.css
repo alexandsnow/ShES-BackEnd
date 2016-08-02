@@ -72,7 +72,7 @@ p {
 	width: 45px;
 	height: 45px;
 	margin-top:3px;
-	margin-right:10px;
+	margin-right:3px;
 	border-radius: 50px;
 	float:left;
 	display: block;
@@ -86,8 +86,28 @@ p {
 	float: right;
     margin-right:15px;
 }
-.float-right li {
+.float-right img {
 	float:left;
+	cursor:pointer;
+}
+.float-right div {
+	float:left;
+	font-size:20px;
+	font-weight: 700;
+	line-height:50px;
+}
+.float-right .username {
+	margin-right:10px;
+	cursor:pointer;
+}
+.float-right .out {
+	margin-left:10px;
+}
+.float-right .out a {
+	display:block;
+	text-decoration: none;
+	line-height:50px;
+	color: #02915f;
 }
 .nav-bar{
 	display: block;
@@ -108,6 +128,13 @@ p {
 .nav-bar li:hover{
 	border-bottom: 4px solid #02915f;
 	background-color: #eee;
+}
+.nav-bar .isSelected {
+	border-bottom: 4px solid #02915f;
+	background-color: #CCC;
+}
+.nav-bar .noSelected {
+	
 }
 
 /*头部样式结束*/
