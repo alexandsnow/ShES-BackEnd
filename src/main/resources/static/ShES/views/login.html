@@ -26,6 +26,7 @@
 				/>
 				<div class="warning" ng-if="LoginForm.password.$invalid && LoginForm.password.$touched">请输入6到10位的密码</div>
 			</div>
+			<div ng-if="wrongPswd" class="warning">用户名或者密码输入错误！</div>
 			<div class="form-group">
 				<button type="submit" 
 					class="btn btn-success btn-lg btn-block"

@@ -31,30 +31,41 @@
 	</div>
 	<!--模态弹出框结束 -->
 	<!-- 倒计时模块结束 -->
+	<!-- 题目展示模块开始 -->
 	<div class="subAnswer-part">
 		<div class="testPaperTitle">
 			<h3 ng-bind="questions.groupName">学习型班组</h3>
 			<p>10 个问题 1 页<br> <br>考察 <strong ng-bind="questions.groupName"></strong>相关内容学习情况，请根据题目选出正确答案</p>
 		</div>
-
-		<div class="questionWrap"  ng-repeat="question in questions.questionGroup">
-			<div class="questionObj">
-				<div class="title">
-					<span ng-bind="question.id"></span>:
-					<span ng-bind="question.title"></span>
-				</div>
-				<div class="answers" ng-repeat="answer in question.answers">
+		<form name="Qaform" ng-submit="QaForm()" novalidate="novalidate" role="form">
+			<div class="questionWrap"  ng-repeat="question in questions">
+				<div class="questionObj">
+					<div class="title">
+						<span ng-bind="$index+1"></span>:
+						<span ng-bind="question.title"></span>
+					</div>
 					<div class="item">
-						<input type="radio"/>
-						<span ng-bind="answer.id" ></span>
-						<span ng-bind="answer.content"></span>
-					</div>					
+						<input type="checkbox" ng-click="isSelected($index,0)" ng-model="choosed0"/>
+						<span ng-bind="question.itemA"></span>
+					</div>
+					<div class="item">
+						<input type="checkbox" ng-click="isSelected($index,1)" ng-model="choosed1"/>
+						<span ng-bind="question.itemB"></span>
+					</div>
+					<div class="item">
+						<input type="checkbox" ng-click="isSelected($index,2)" ng-model="choosed2"/>
+						<span ng-bind="question.itemC"></span>
+					</div>
+					<div class="item">
+						<input type="checkbox" ng-click="isSelected($index,3)" ng-model="choosed3"/>
+						<span ng-bind="question.itemD"></span>
+					</div>									
 				</div>
 			</div>
-
-		</div>
-		<div class="btn-submit">
-			<button type="button" class="btn btn-success">提交答案</button>
-		</div>
+			<div class="btn-submit">
+				<button type="submit" class="btn btn-success" ng-disabled="Qaform.$invalid">提交答案</button>
+			</div>
+		</form>
 	</div>
+	<!--  题目展示模块结束-->
 </div>

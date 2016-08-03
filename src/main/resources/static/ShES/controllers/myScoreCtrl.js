@@ -4,4 +4,8 @@ angular.module('controller')
 	"$scope",
 	function($scope){
 		console.log("This is myScoreCtrl");
+		$('#myRoundabout').roundabout({
+		 	shape: 'figure8',
+		 	minOpacity: 1
+		});
 }])

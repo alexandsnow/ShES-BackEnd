@@ -21,7 +21,7 @@
 			<div class="form-group">
 				<input type="password" class="form-control" placeholder="请输入密码"
 					name="password1"
-					ng-model="password1"
+					ng-model="password"
 					ng-maxlength="10"
 					ng-minlength="6"
 					required
@@ -30,15 +30,25 @@
 				<div class="warning" ng-if="RegisterForm.password1.$invalid && RegisterForm.password1.$touched">请输入6到10位的密码</div>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control" placeholder="请输入部门名称"
+				<input type="password" class="form-control" placeholder="请输入确认密码"
 					name="password2"
-					ng-model="password2"
+					ng-model="passwordagain"
 					ng-maxlength="10"
 					ng-minlength="6"
 					required
 					ng-class="{'error':RegisterForm.password2.$invalid && RegisterForm.password2.$touched}"
+					/>
+				<div class="warning" ng-if="RegisterForm.password2.$invalid && RegisterForm.password2.$touched">请输入6到10位的确认密码</div>
+				<div class="warning" ng-if="RegisterForm.password2.$touched&&(password!=passwordagain)">两次密码输入不一致</div>
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="请输入部门名称"
+					name="partmentName"
+					ng-model="partment"
+					required
+					ng-class="{'error':RegisterForm.partmentName.$invalid && RegisterForm.partmentName.$touched}"
 				/>
-				<div class="warning" ng-if="RegisterForm.password2.$invalid && RegisterForm.password2.$touched">请输入部门名称</div>
+				<div class="warning" ng-if="RegisterForm.partmentName.$invalid && RegisterForm.partmentName.$touched">请输入部门名称</div>
 			</div>
 
 			<div class="form-group">

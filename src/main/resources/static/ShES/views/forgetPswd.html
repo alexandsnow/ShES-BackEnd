@@ -17,7 +17,7 @@
 			<div class="form-group">
 				<input type="password" class="form-control" placeholder="请输入新密码"
 					name="password1"
-					ng-model="password1"
+					ng-model="password"
 					ng-maxlength="10"
 					ng-minlength="6"
 					required
@@ -28,13 +28,14 @@
 			<div class="form-group">
 				<input type="password" class="form-control" placeholder="请输入确认密码"
 					name="password2"
-					ng-model="password2"
+					ng-model="passwordagain"
 					ng-maxlength="10"
 					ng-minlength="6"
 					required
 					ng-class="{'error':ForgetPswdForm.password2.$invalid && ForgetPswdForm.password2.$touched}"
 				/>
 				<div class="warning" ng-if="ForgetPswdForm.password2.$invalid && ForgetPswdForm.password2.$touched">请输入6到10位的密码</div>
+				<div class="warning" ng-if="ForgetPswdForm.password2.$touched&&(password!=passwordagain)">两次密码输入不一致</div>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-success btn-lg btn-block">确认</button>

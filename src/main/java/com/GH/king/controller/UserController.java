@@ -44,9 +44,9 @@ public class UserController {
                     produces  = MediaType.APPLICATION_JSON_VALUE,
                     consumes = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "register a user in the database",response = User.class)
-    public ResponseEntity<Object> RegisterUser(@RequestParam(value = "Name") String userName ,
-                                             @RequestParam(value = "Password")String password,
-                                             @RequestParam(value = "Department")String department){
+    public ResponseEntity<Object> RegisterUser( @RequestParam(value = "Name") String userName ,
+                                                @RequestParam(value = "Password")String password,
+                                                @RequestParam(value = "Department")String department){
         User userTemp = userRepo.findByName(userName);
         if(userTemp==null){
             User user = new User();
@@ -114,4 +114,16 @@ public class UserController {
             }
         }
     }
+    @RequestMapping(value ="/deleteUser/{userName}",method = RequestMethod.DELETE)
+    @ApiOperation("删除用户")
+    public String deleteUser(@PathVariable("userName")String userName){
+        User usertemp = userRepo.findByName(userName);
+        if(usertemp == null){
+            throw new ResourceNotFoundException("there is no such user");
+        }else{
+            userRepo.delete(usertemp);
+            return "successful to delete user "+userName;
+        }
+    }
+
 }

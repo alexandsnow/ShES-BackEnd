@@ -116,4 +116,23 @@ public class QuestionBankController {
         }
         return new ResponseEntity<>(result,HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/getAllQuestions",method = RequestMethod.GET)
+    @ApiOperation("获取所有的题目")
+    public ResponseEntity<Iterable<Question>> getAllQuestions(){
+        return new ResponseEntity<>(questionRepo.findAll(),HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/deleteQuestion/{Id}",method = RequestMethod.DELETE)
+    @ApiOperation("删除题目")
+    public String deleteQuestion(@PathVariable("Id")String id){
+        Question question = questionRepo.findOne(id);
+        if(question == null){
+            throw new ResourceNotFoundException("there is no such question");
+        }else{
+            questionRepo.delete(question);
+            return "Successful to delete the question by id equals "+id;
+        }
+
+    }
 }

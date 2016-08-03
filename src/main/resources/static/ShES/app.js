@@ -1,8 +1,5 @@
 'use strict';
-var indexApp = angular.module('indexApp', [
-	'ui.router',
-	'controller'
-]);
+var indexApp = angular.module('indexApp', ['ui.router',	'controller']);
 indexApp.run([
 	'$rootScope', 
 	'$state', 
