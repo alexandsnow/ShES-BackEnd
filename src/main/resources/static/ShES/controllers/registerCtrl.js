@@ -12,45 +12,27 @@ angular.module('controller')
 			console.log($scope.password);
 			console.log($scope.passwordagain);
 			console.log($scope.partment);
-			/*var url="http://120.27.30.105:8080/GaH/v1/registerUser";
-			var params = {
-				"Name":$scope.userName,
-				"Password":$scope.password,
-				"Department":$scope.partment
-			};
-			$http.post({
-				url:url,
-				data:params,
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded'}
-			}).success(function (data,status,headers,config) { 
-				console.log(data);
-				//deferred.resolve(data);  
-            }).error(function (data,status,headers,config) {  
-            	console.log(data);
-                //deferred.reject(data);  
-            });*/
+			
 			var deferred=$q.defer();
-			var url="http://120.27.30.105:8080/GaH/v1/registerUser?Name=test12345612&Password=test&Department=test";
-			/*var params = {
-				"Name":$scope.userName,
-				"Password":$scope.password,
-				"Department":$scope.partment
-			};*/
-			//var data = "&Name="+$scope.userName+"&Password="+$scope.password+"&Department="+$scope.partment;
+			var url=baseUrl+"/registerUser";
+			//var url='http://192.168.1.119:8080/v1/registerUser';
+			var params = {
+				"userName":$scope.userName,
+				"password":$scope.password,
+				"department":$scope.partment
+			};
 			var promise = $http(
 			{
 				method : 'post',
 				url : url,
-				//data : params,
+				params : params,
 				headers : {
 					'Content-Type' : 'application/json;charset=UTF-8'
 				}		
-			}).success(function (data,status,headers,config) { 
-				console.log(data);
+			}).success(function (data,status,headers,config) { 			
 				deferred.resolve(data);  
             })  
-            .error(function (data,status,headers,config) {  
-            	console.log(headers);
+            .error(function (data,status,headers,config) {              	
                 deferred.reject(config);  
             });
             deferred.promise.then(function(data){

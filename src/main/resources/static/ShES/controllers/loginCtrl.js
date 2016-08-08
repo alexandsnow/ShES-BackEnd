@@ -10,7 +10,7 @@ angular.module('controller')
 		$scope.userData={};
 		$scope.Login=function(){
 			var deferred = $q.defer(); 
-			var url="http://120.27.30.105:8080/GaH/v1/login"
+			var url=baseUrl+"/login";
 			console.log($scope.userData.userName);
 			console.log($scope.userData.password);
 			var params = {
@@ -28,7 +28,9 @@ angular.module('controller')
                 deferred.reject(data);  
             });
             deferred.promise.then(function(data){
+            	console.log(data);
             	if (data==1) {
+            		window.localStorage["userName"]=$scope.userData.userName;
             		$state.go("header.indexpage");
             	}else if(data==0) {
             		$scope.wrongPswd=true;

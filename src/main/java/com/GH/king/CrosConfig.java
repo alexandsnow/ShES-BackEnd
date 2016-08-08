@@ -17,6 +17,7 @@ public class CrosConfig implements Filter {
 
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin","*");
+        response.setHeader("Access-Control-Allow-Methods","GET,PUT,DELETE,POST");
         chain.doFilter(req, res);
     }
     @Override

@@ -110,6 +110,7 @@ public class QuestionBankController {
             throw new ResourceNotFoundException("there is no such user in database");
         }else{
             System.out.println(questionID);
+            System.out.println(answers);
             user.setQuestions(questionID);
             user.setAnswers(answers);
             userRepo.save(user);

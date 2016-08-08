@@ -39,14 +39,11 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "registerUser" ,
-                    method = RequestMethod.POST,
-                    produces  = MediaType.APPLICATION_JSON_VALUE,
-                    consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "registerUser" , method = RequestMethod.POST)
     @ApiOperation(value = "register a user in the database",response = User.class)
-    public ResponseEntity<Object> RegisterUser( @RequestParam(value = "Name") String userName ,
-                                                @RequestParam(value = "Password")String password,
-                                                @RequestParam(value = "Department")String department){
+    public ResponseEntity<Object> RegisterUser( @RequestParam(value = "userName") String userName ,
+                                                @RequestParam(value = "password")String password,
+                                                @RequestParam(value = "department")String department){
         User userTemp = userRepo.findByName(userName);
         if(userTemp==null){
             User user = new User();
@@ -65,7 +62,7 @@ public class UserController {
 
     @RequestMapping(value="/modifyPassword/{userName}",method= RequestMethod.PUT)
     @ApiOperation("modify password of user by Id")
-    public ResponseEntity<User> modifyPassword(@PathVariable("userName") String userName, @RequestParam String password){
+    public ResponseEntity<User> modifyPassword(@PathVariable("userName") String userName, @RequestParam("password") String password){
         User user = userRepo.findByName(userName);
         if(user==null){
             throw new ResourceNotFoundException("There is no such User in database");

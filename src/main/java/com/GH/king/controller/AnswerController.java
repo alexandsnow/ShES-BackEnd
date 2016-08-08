@@ -26,12 +26,12 @@ public class AnswerController {
 
     @RequestMapping(value = "uploadAnswer/{userName}",method = RequestMethod.POST)
     @ApiOperation("根据用户名上传用户答案，并返回成绩")
-    public ResponseEntity<String> uploadAnswer(@PathVariable("userName")String userName, @RequestParam("answer") String userAnswer){
+    public ResponseEntity<Integer> uploadAnswer(@PathVariable("userName")String userName, @RequestParam("answer") String userAnswer){
         User user = validateUser(userName);
         String trueAnswer = user.getAnswers();
         AnswerService answerService = new AnswerServiceImpl();
         int count=answerService.parseAnswer(userAnswer,trueAnswer);
-        return new ResponseEntity<>(userName+" 的成绩为："+count, HttpStatus.OK);
+        return new ResponseEntity<>(count, HttpStatus.OK);
     }
 
     public User validateUser(String userName){

@@ -5,7 +5,8 @@ angular.module('controller')
 	"$state",
 	function($scope){
 		console.log("This is headerCtrl");
-		$scope.username="小明";
+		$scope.username=window.localStorage["userName"];
+		$scope.currentUrl=baseUrl+"/userPic/"+$scope.username;
 		var positions="班组长";
 		$scope.navActived1=true;
 		$scope.navActived2=false;

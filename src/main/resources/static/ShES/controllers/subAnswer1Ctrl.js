@@ -48,7 +48,8 @@ angular.module('controller')
 	// 倒计时结束
 	//答题部分开始
 	var deferred = $q.defer(); 
-	var url="http://120.27.30.105:8080/GaH/v1/getQuestions/gaoyang/1"
+	var currentUser=window.localStorage["userName"];
+	var url=baseUrl+"/getQuestions/"+currentUser+"/1";
 	var promise = $http({
 		url:url,
 		method:"GET"
@@ -105,6 +106,30 @@ angular.module('controller')
 				answer = answer + selectedItem[i];
 		}
 		console.log(answer);
+		var deferred = $q.defer(); 
+		var currentUser=window.localStorage["userName"];
+		var url=baseUrl+"/uploadAnswer/"+currentUser;
+		var params={"answer":answer};
+		console.log(url);
+		var promise = $http({
+				method : 'post',
+				url : url,
+				params : params,
+				headers : {
+					'Content-Type' : 'application/json;charset=UTF-8'
+				}
+		}).success(function (data,status,headers,config) { 
+			deferred.resolve(data);  
+    	})  
+    	.error(function (data,status,headers,config) {  
+      	  	deferred.reject(data);  
+    	});
+    	deferred.promise.then(function(data){
+    		console.log(data);
+    		
+   	 	},function(err){
+			console.log(err);
+    	})
 		answer="";
 	}
 

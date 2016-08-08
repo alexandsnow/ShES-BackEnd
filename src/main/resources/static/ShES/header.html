@@ -28,7 +28,7 @@
 				</li>
 			</ul>
 			<div class="nav navbar-nav nav-bar float-right">
-				<img class="user-pic" src="images/userPic.jpg" alt="用户头像" data-toggle="tooltip" data-placement="bottom">
+				<img class="user-pic" ng-src="{{currentUrl}}"  err-src="imags/userPic.jpg"alt="用户头像" data-toggle="tooltip" data-placement="bottom">
 				<div class="username" ng-bind="username"></div>
 				<div>|</div>
 				<div class="out"><a ui-sref="login">退出</a></div>
